@@ -14,15 +14,16 @@ def even_or_odd(integer):
 # 1. Write a function that takes a non-negative integer as a parameter and returns the 
 #    number of digits in it.
 #	"""Returns number of digits"""
-# def number_digits(integer):
-# 
-# 	"""Returns number of digits in integer"""
-# 	if integer / 10 < 1:
-# 		return single
-# 
-# 	while integer / 10 > 1:
-# 		digits += 1
-# 		return digits
+def number_digits(integer):
+
+	"""Returns number of digits in integer"""
+
+	
+	digits = 0
+	while integer >= 1:
+		digits += 1
+		integer = integer/10
+	return digits
 	
 	
 
@@ -46,7 +47,12 @@ def sum_digits(integer):
 #     For example: sum_less_ints(3) → 3, which is 1 + 2
 #     sum_less_ints(5) → 10, which is 1 + 2 + 3 + 4
 
-
+def sum_less(integer):
+	
+	count = 0
+	while count < integer:
+		count+=1
+		adding += count
 
 
 
@@ -65,12 +71,9 @@ def factorial(n):
 # out whether the second number is a factor the first. In other words, returns true if 
 # the second number divides into the first number evenly, and false otherwise.
 
-# def find_factor(bigger, smaller):
-# 
-# 	if bigger % smaller == 0:
-# 		return True
-# 	else:
-# 		return False
+def find_factor(bigger, smaller):
+
+	return bigger % smaller == 0
 
 
 
@@ -84,6 +87,7 @@ def is_prime(number):
 		if number % count == 0:
 			return False
 		count += 1
+	return True
 		
 
 
@@ -94,10 +98,22 @@ def is_prime(number):
 
 def is_perfect(number):
 
-
+	total = 0
+	for item in range(1, number):
+		if number % item == 0:
+			total += item
+	return number == total
+			
 
 # 8  Write a boolean function that takes a positive integer as a parameter and returns 
 #    true if the sum of the digits of the number divides evenly into the number, false 
 #    otherwise. You MUST call the sumDigits function you wrote in question 2 to define 
 #    this function
+
+def sum_divisible (number):
+
+	sum = sum_digits(number)
+	return number % sum == 0
+	
+
 
