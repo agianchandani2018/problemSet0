@@ -26,6 +26,12 @@ print("The sum of the digits of 1239 is {}".format(ps0.sum_digits(1239)))
 #3 - sum of preceeding
 #TODO
 
+print("The sum of all integers less than 14 is {}".format(ps0.sum_less(14)))
+print("The sum of all integers less than 17 is {}".format(ps0.sum_less(17)))
+print("The sum of all integers less than 0 is {}".format(ps0.sum_less(0)))
+print("The sum of all integers less than 3 is {}".format(ps0.sum_less(3)))
+
+
 
 
 #4 - factorial

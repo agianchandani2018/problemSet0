@@ -5,10 +5,7 @@ def even_or_odd(integer):
 	
 	"""Returns if integer is even or odd"""
 	
-	if integer % 2 == 0:
-		return True
-	else:
-		return False	
+	return integer % 2 == 0
 
 
 # 1. Write a function that takes a non-negative integer as a parameter and returns the 
@@ -25,8 +22,6 @@ def number_digits(integer):
 		integer = integer/10
 	return digits
 	
-	
-
 
 # 2. Write a function that takes a non-negative integer as a parameter and returns the 
 #    sum of its digits.
@@ -49,11 +44,12 @@ def sum_digits(integer):
 
 def sum_less(integer):
 	
+	total = 0
 	count = 0
-	while count < integer:
-		count+=1
-		adding += count
-
+	for item in range(1, integer):
+		total += item
+		
+	return total	
 
 
 # 4  Write a function that takes a non-negative integer as a parameter and returns its factorial.
@@ -76,7 +72,6 @@ def find_factor(bigger, smaller):
 	return bigger % smaller == 0
 
 
-
 # 6  Write a boolean function that takes a positive integer as a parameter and returns 
 #    whether the number is a prime.
 
@@ -89,7 +84,6 @@ def is_prime(number):
 		count += 1
 	return True
 		
-
 
 # 7  Write a boolean function that takes a positive integer as a parameter and returns 
 #    whether the number is perfect. A perfect number is a number that equals the sum of 
