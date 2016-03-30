@@ -1,4 +1,5 @@
 # problemSet0
+# Ami Gianchandani
 
 #This is several different functions which all do something different.
 
