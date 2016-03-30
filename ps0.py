@@ -1,3 +1,7 @@
+#Problem Set 0 
+#Author: Ami Gianchandani
+#Date: April 1
+
 # 0. Write a boolean function that takes in a positive integer or zero as a parameter and 
 #    returns whether the number is odd or even.
 
@@ -42,6 +46,8 @@ def sum_digits(integer):
 #     For example: sum_less_ints(3) → 3, which is 1 + 2
 #     sum_less_ints(5) → 10, which is 1 + 2 + 3 + 4
 
+"""Returns  the sum of all integers less than the number"""
+
 def sum_less(integer):
 	
 	total = 0
@@ -56,6 +62,8 @@ def sum_less(integer):
 #    For example: factorial(3) → 6, which is 3!
 #    factorial(5) → 120, which is 5!
 
+"""Returns the factorial of a number"""
+
 def factorial(n):
     number = 1
     while n >= 1:
@@ -67,6 +75,8 @@ def factorial(n):
 # out whether the second number is a factor the first. In other words, returns true if 
 # the second number divides into the first number evenly, and false otherwise.
 
+"""Returns whether or not a number is a factor of another number"""
+
 def find_factor(bigger, smaller):
 
 	return bigger % smaller == 0
@@ -74,6 +84,8 @@ def find_factor(bigger, smaller):
 
 # 6  Write a boolean function that takes a positive integer as a parameter and returns 
 #    whether the number is a prime.
+
+"""Returns whether or not a number is prime"""
 
 def is_prime(number):
 
@@ -90,6 +102,8 @@ def is_prime(number):
 #    proper its proper factors. A proper factor is any factor except the number itself.  
 #    For example: isPerfect(6) → True, because 6 = 1 + 2 + 3.
 
+"""Returns if a number is perfect"""
+
 def is_perfect(number):
 
 	total = 0
@@ -104,10 +118,10 @@ def is_perfect(number):
 #    otherwise. You MUST call the sumDigits function you wrote in question 2 to define 
 #    this function
 
+"""Returns whether or not the number is divisible by the sum of its digits"""
+
 def sum_divisible (number):
 
 	sum = sum_digits(number)
 	return number % sum == 0
 	
-
-
